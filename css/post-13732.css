@@ -1,0 +1,151 @@
+.elementor-13732 .elementor-element.elementor-element-c3042f2>.elementor-container>.elementor-column>.elementor-widget-wrap {
+    align-content: center;
+    align-items: center;
+}
+
+.elementor-13732 .elementor-element.elementor-element-c3042f2:not(.elementor-motion-effects-element-type-background),
+.elementor-13732 .elementor-element.elementor-element-c3042f2>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+    background-color: #FFFFFF;
+}
+
+.elementor-13732 .elementor-element.elementor-element-c3042f2 {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.elementor-13732 .elementor-element.elementor-element-c3042f2>.elementor-background-overlay {
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-13732 .elementor-element.elementor-element-ffb1a05>.elementor-element-populated {
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-13732 .elementor-element.elementor-element-a52c402 .ct-logo img {
+    max-height: 65px;
+}
+
+.elementor-13732 .elementor-element.elementor-element-a52c402>.elementor-widget-container {
+    margin: 0px 0px 0px 15px;
+}
+
+.elementor-13732 .elementor-element.elementor-element-a52c402 {
+    z-index: 2;
+}
+
+.elementor-bc-flex-widget .elementor-13732 .elementor-element.elementor-element-36316a3.elementor-column .elementor-widget-wrap {
+    align-items: center;
+}
+
+.elementor-13732 .elementor-element.elementor-element-36316a3.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+    align-content: center;
+    align-items: center;
+}
+
+.elementor-13732 .elementor-element.elementor-element-36316a3.elementor-column>.elementor-widget-wrap {
+    justify-content: space-between;
+}
+
+.elementor-13732 .elementor-element.elementor-element-36316a3>.elementor-element-populated {
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-13732 .elementor-element.elementor-element-6b6ec72 .ct-nav-menu .ct-main-menu>li {
+    margin: 0px 20px 0px 15px;
+}
+
+.elementor-13732 .elementor-element.elementor-element-6b6ec72>.elementor-widget-container {
+    padding: 0px 30px 0px 50px;
+}
+
+.elementor-13732 .elementor-element.elementor-element-6b6ec72 {
+    width: auto;
+    max-width: auto;
+}
+
+.elementor-13732 .elementor-element.elementor-element-eed1a56 .ct-search-popup i {
+    color: #222222;
+}
+
+.elementor-13732 .elementor-element.elementor-element-eed1a56 .ct-search-popup:hover i {
+    color: #E91919;
+}
+
+.elementor-13732 .elementor-element.elementor-element-eed1a56>.elementor-widget-container {
+    margin: 0px 15px 0px 15px;
+}
+
+.elementor-13732 .elementor-element.elementor-element-eed1a56 {
+    width: auto;
+    max-width: auto;
+    z-index: 1;
+}
+
+@media(min-width:768px) {
+    .elementor-13732 .elementor-element.elementor-element-ffb1a05 {
+        width: 25%;
+    }
+
+    .elementor-13732 .elementor-element.elementor-element-36316a3 {
+        width: 75%;
+    }
+}
+
+
+.ct-contact-content span{
+    color: #fe0000;
+}
+
+.ct-text-editor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.menu-item-2929 span.ct-menu-toggle{
+    display: none;
+}
+.menu-item-223 span.ct-menu-toggle{
+    display: none;
+}
+.menu-item-220 span.ct-menu-toggle{
+    display: none;
+}
+.menu-item-126 span.ct-menu-toggle{
+    display: none;
+}
+.menu-item-637 span.ct-menu-toggle{
+    display: none;
+}
+
+/* 
+.ct-menu-toggle{
+    display: none;
+} */
+/* 
+
+.mobile-sub-list span.ct-menu-toggle {
+    position: absolute;
+    top: 10px;
+    height: 30px;
+    right: 0;
+    width: 30px;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 10px;
+    -webkit-transition: all 300ms linear 0ms;
+    -khtml-transition: all 300ms linear 0ms;
+    -moz-transition: all 300ms linear 0ms;
+    -ms-transition: all 300ms linear 0ms;
+    -o-transition: all 300ms linear 0ms;
+    transition: all 300ms linear 0ms;
+    color: rgba(34,34,34,.67);
+    border: 1px solid rgba(34,34,34,8%);
+} */

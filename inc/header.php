@@ -1,0 +1,665 @@
+<?php
+include('dbconnection.php');
+$request_uri = str_replace("/kamhan","",$_SERVER['REQUEST_URI']);
+if($request_uri === '/index.php' || $request_uri === '/'){
+	?>
+	<header id="ct-header-elementor" class="is-sticky">
+		<div class="ct-header-elementor-main">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div data-elementor-type="wp-post" data-elementor-id="146" class="elementor elementor-146">
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-1ffdcbf elementor-section-content-middle elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none ct-row-container--default" data-id="1ffdcbf" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" style="width: 1519px; left: -174.6px;"><div class="elementor-container elementor-column-gap-extended "><div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-fe9145a ct-column-none col-offset-none" data-id="fe9145a" data-element_type="column"><div class="elementor-widget-wrap elementor-element-populated"><div class="elementor-element elementor-element-53168cb elementor-widget elementor-widget-ct_text_editor" data-id="53168cb" data-element_type="widget" data-widget_type="ct_text_editor.default"><div class="elementor-widget-container"><div id="ct_text_editor-53168cb" class="ct-text-editor " data-wow-delay="ms"><div class="ct-text-editor-inner elementor-clearfix"><p>Welcome to our <a href="./index.php" data-wplink-url-error="true">Kamhan Industrial Limited</a></p></div></div></div></div></div></div><div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-220477c ct-column-none col-offset-none" data-id="220477c" data-element_type="column"><div class="elementor-widget-wrap elementor-element-populated"><div class="elementor-element elementor-element-c969b5a elementor-widget__width-auto contact-info-custom elementor-widget elementor-widget-ct_contact_info" data-id="c969b5a" data-element_type="widget" data-widget_type="ct_contact_info.default"><div class="elementor-widget-container"><div id="ct_contact_info-c969b5a" class="ct-contact-info ct-contact-info1 style1 " data-wow-duration="1.2s"><div class="item--contact-info"> <span class="ct-contact-icon"> <i aria-hidden="true" class="fa-brands fa-weixin"></i> </span> <span class="ct-contact-content"> +852 93665561 </span></div></div></div></div><div class="elementor-element elementor-element-a287b70 elementor-widget__width-auto elementor-widget elementor-widget-ct_icon" data-id="a287b70" data-element_type="widget" data-widget_type="ct_icon.default"><div class="elementor-widget-container"><div class="ct-icon1 style1 icon-align-"> <a class="ct_icon-a287b70-0 elementor-repeater-item-03603e5" href="https://www.facebook.com/kamhanindustrial/" target="_blank"> <i aria-hidden="true" class="fab fa-facebook-f"></i>  <a class="ct_icon-a287b70-3 elementor-repeater-item-d405cc7" href="https://www.youtube.com/channel/UCsXOYaq7UcqzjT7APqIJvrQ" target="_blank"> <i aria-hidden="true" class="fab fa-youtube"></i> </a></div></div></div></div></div></div></section>
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-1ffdcbf elementor-section-content-middle elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none ct-row-container--default" data-id="1ffdcbf">
+								
+							</section>
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-95bfbf2 elementor-section-content-middle elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none ct-row-container--default" data-id="95bfbf2" data-element_type="section">
+								<div class="elementor-container elementor-column-gap-extended ">
+									<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-14044c7 ct-column-none col-offset-none" data-id="14044c7" data-element_type="column">
+										<div class="elementor-widget-wrap elementor-element-populated">
+											<div class="elementor-element elementor-element-a52c402 elementor-widget elementor-widget-ct_logo" data-id="a52c402" data-element_type="widget" data-widget_type="ct_logo.default">
+												<div class="elementor-widget-container">
+													<div class="ct-logo  style1">
+														<a href="./index.php">
+															<img width="783" height="216" src="images/kamhan-logo.png" class="attachment-full" alt="">
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-0324e50 ct-column-none col-offset-none" data-id="0324e50" data-element_type="column">
+										<div class="elementor-widget-wrap elementor-element-populated">
+											<div class="elementor-element elementor-element-665ce2a elementor-widget__width-auto elementor-widget elementor-widget-ct_contact_info" data-id="665ce2a" data-element_type="widget" data-widget_type="ct_contact_info.default">
+												<div class="elementor-widget-container">
+													<div id="ct_contact_info-665ce2a" class="ct-contact-info ct-contact-info2 style1 " data-wow-duration="1.2s">
+														<div class="item--contact-info">
+															<span class="ct-contact-icon icon-right-from-Left">
+																<a href="tel:8884521505">
+																	<i aria-hidden="true" class="flaticon2 flaticon2-phone-call"></i>
+																</a>
+															</span>
+															<div class="item-meta">
+																<label class="ct-contact-label">
+																	Call Us for help!
+																</label>
+																<a class="ct-contact-content" href="tel:85293665561">
+																	+ 852 93665561 
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="elementor-element elementor-element-f69a886 elementor-widget__width-auto elementor-widget elementor-widget-ct_contact_info" data-id="f69a886" data-element_type="widget" data-widget_type="ct_contact_info.default">
+												<div class="elementor-widget-container">
+													<div id="ct_contact_info-f69a886" class="ct-contact-info ct-contact-info2 style1 " data-wow-duration="1.2s">
+														<div class="item--contact-info">
+															<span class="ct-contact-icon icon-right-from-Left">
+																<a href="mailto:help@gmail.com">
+																	<i aria-hidden="true" class="flaticon2 flaticon2-mail"></i>
+																</a>
+															</span>
+															<div class="item-meta">
+																<label class="ct-contact-label">
+																	Mail Us
+																</label>
+																<a class="ct-contact-content" href="mailto:help@gmail.com">
+																	kamhan@kamhan.com
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-c3042f2 elementor-section-content-middle elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none ct-row-container--default" data-id="c3042f2" data-element_type="section" data-settings="{" stretch_section":"section-stretched"}"="">
+								<div class="elementor-container elementor-column-gap-extended ">
+									<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ffb1a05 ct-column-none col-offset-none" data-id="ffb1a05" data-element_type="column">
+										<div class="elementor-widget-wrap"></div>
+									</div>
+									<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-36316a3 bg-column-menu-custom ct-column-none col-offset-none" data-id="36316a3" data-element_type="column">
+										<div class="elementor-widget-wrap elementor-element-populated">
+											<div class="elementor-element elementor-element-33389d4 elementor-widget__width-auto elementor-widget elementor-widget-ct_menu" data-id="33389d4" data-element_type="widget" data-widget_type="ct_menu.default">
+												<div class="elementor-widget-container">
+													<div class="ct-nav-menu ct-nav-menu1 style2 hv-style1 sub-hv-style3">
+														<div class="menu-primary-menu-container">
+															<ul id="menu-primary-menu" class="ct-main-menu clearfix">
+																<li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-86 current_page_item megamenu megamenu-style-alt">
+																	<a href="./index.php" aria-current="page">
+																		<span class="ct-menu-item">
+																			<span class="ct-item--number">
+																				<span></span>
+																			</span>Home</span>
+																		<span class="ct-menu--plus"></span>
+																	</a>
+																</li>
+																<li id="menu-item-223" class="menu-item menu-item-type-custom menu-item-object-custom">
+																	<a href="./about.php">
+																		<span class="ct-menu-item">
+																			<span class="ct-item--number">
+																				<span></span>
+																			</span>About Us</span>
+																		<span class="ct-menu--plus"></span>
+																	</a>
+																</li>
+																<li id="menu-item-223" class="menu-item menu-item-type-custom menu-item-object-custom">
+																	<a href="./events.php">
+																		<span class="ct-menu-item">
+																			<span class="ct-item--number">
+																				<span></span>
+																			</span>Events</span>
+																		<span class="ct-menu--plus"></span>
+																	</a>
+																</li>
+																<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-223">
+																	<a href="#">
+																		<span class="ct-menu-item">
+																			<span class="ct-item--number">
+																				<span></span>
+																			</span>Products</span>
+																		<span class="ct-menu--plus"></span>
+																	</a>
+																	<ul class="sub-menu">
+																		<li id="menu-item-1184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184">
+																			<a href="./footwear-products.php">
+																				<span class="ct-menu-item">
+																					<span class="ct-item--number">
+																						<span></span>
+																					</span>Footwear Machinery</span>
+																				<span class="ct-menu--plus"></span>
+																			</a>
+																		</li>
+																		<li id="menu-item-13883" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13883">
+																			<a href="./stone-products.php">
+																				<span class="ct-menu-item">
+																					<span class="ct-item--number">
+																						<span></span>
+																					</span>Stone Polishing & Cuttting</span>
+																				<span class="ct-menu--plus"></span>
+																			</a>
+																		</li>
+																		<li id="menu-item-1185" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1185">
+																			<a href="./other-products.php">
+																				<span class="ct-menu-item">
+																					<span class="ct-item--number">
+																						<span></span>
+																					</span>Other Products</span>
+																				<span class="ct-menu--plus"></span>
+																			</a>
+																		</li>
+																	</ul>
+																</li>
+																<li id="menu-item-637" class="menu-item menu-item-type-post_type">
+																	<a href="./contact.php">
+																		<span class="ct-menu-item">
+																			<span class="ct-item--number">
+																				<span></span>
+																			</span>Contact Us</span>
+																		<span class="ct-menu--plus"></span>
+																	</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ct-header-elementor-sticky">
+			<div class="container">
+				<div class="row">
+					<div data-elementor-type="wp-post" data-elementor-id="13732" class="elementor elementor-13732">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-c3042f2 elementor-section-content-middle elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none ct-row-container--default" data-id="c3042f2" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-extended ">
+								<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ffb1a05 ct-column-none col-offset-none" data-id="ffb1a05" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-a52c402 elementor-widget elementor-widget-ct_logo" data-id="a52c402" data-element_type="widget" data-widget_type="ct_logo.default">
+											<div class="elementor-widget-container">
+												<div class="ct-logo  style1">
+													<a href="./index.php">
+														<img width="783" height="216" src="images/kamhan-logo.png" class="attachment-full" alt="">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-36316a3 bg-column-menu-custom ct-column-none col-offset-none" data-id="36316a3" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-6b6ec72 elementor-widget__width-auto elementor-widget elementor-widget-ct_menu" data-id="6b6ec72" data-element_type="widget" data-widget_type="ct_menu.default">
+											<div class="elementor-widget-container">
+												<div class="ct-nav-menu ct-nav-menu1 style2 hv-style1 sub-hv-style3">
+													<div class="menu-primary-menu-container">
+														<ul id="menu-primary-menu" class="ct-main-menu clearfix">
+															<li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-86 current_page_item megamenu megamenu-style-alt">
+																<a href="./index.php" aria-current="page">
+																	<span class="ct-menu-item">
+																		<span class="ct-item--number">
+																			<span></span>
+																		</span>Home</span>
+																	<span class="ct-menu--plus"></span>
+																</a>
+															</li>
+															<li id="menu-item-223" class="menu-item menu-item-type-custom menu-item-object-custom">
+																<a href="./about.php">
+																	<span class="ct-menu-item">
+																		<span class="ct-item--number">
+																			<span></span>
+																		</span>About Us</span>
+																	<span class="ct-menu--plus"></span>
+																</a>
+															</li>
+															<li id="menu-item-223" class="menu-item menu-item-type-custom menu-item-object-custom">
+																<a href="./events.php">
+																	<span class="ct-menu-item">
+																		<span class="ct-item--number">
+																			<span></span>
+																		</span>Events</span>
+																	<span class="ct-menu--plus"></span>
+																</a>
+															</li>
+															<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-223">
+																<a href="#">
+																	<span class="ct-menu-item">
+																		<span class="ct-item--number">
+																			<span></span>
+																		</span>Products</span>
+																	<span class="ct-menu--plus"></span>
+																</a>
+																<ul class="sub-menu">
+																	<li id="menu-item-1184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184">
+																		<a href="./footwear-products.php">
+																			<span class="ct-menu-item">
+																				<span class="ct-item--number">
+																					<span></span>
+																				</span>Footwear Machinery</span>
+																			<span class="ct-menu--plus"></span>
+																		</a>
+																	</li>
+																	<li id="menu-item-13883" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13883">
+																		<a href="./stone-products.php">
+																			<span class="ct-menu-item">
+																				<span class="ct-item--number">
+																					<span></span>
+																				</span>Stone Polishing & Cuttting</span>
+																			<span class="ct-menu--plus"></span>
+																		</a>
+																	</li>
+																	<li id="menu-item-1185" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1185">
+																		<a href="./other-products.php">
+																			<span class="ct-menu-item">
+																				<span class="ct-item--number">
+																					<span></span>
+																				</span>Other Products</span>
+																			<span class="ct-menu--plus"></span>
+																		</a>
+																	</li>
+																</ul>
+															</li>
+															<li id="menu-item-637" class="menu-item menu-item-type-post_type">
+																<a href="./contact.php">
+																	<span class="ct-menu-item">
+																		<span class="ct-item--number">
+																			<span></span>
+																		</span>Contact Us</span>
+																	<span class="ct-menu--plus"></span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ct-header-mobile off_sticky">
+			<div id="ct-header" class="ct-header-main">
+				<div class="container">
+					<div class="row">
+						<div class="ct-header-branding">
+							<a class="logo-mobile" href="./index.php" title="kamhan" rel="home">
+								<img src="images/kamhan-logo.png" alt="kamhan">
+							</a>
+							<a class="logo-light" href="./index.php" title="kamhan" rel="home">
+								<img src="images/logo-light.png" alt="kamhan">
+							</a>
+						</div>
+						<div class="ct-header-navigation">
+							<nav class="ct-main-navigation">
+								<div class="ct-main-navigation-inner">
+									<div class="ct-logo-mobile">
+										<a class="logo-mobile" href="./index.php" title="kamhan" rel="home">
+											<img src="images/kamhan-logo.png" alt="kamhan">
+										</a>
+										<a class="logo-light" href="./index.php" title="kamhan" rel="home">
+											<img src="images/logo-light.png" alt="kamhan">
+										</a>
+									</div>
+									<ul id="menu-primary-menu-2" class="ct-main-menu clearfix">
+										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-86 current_page_item megamenu megamenu-style-alt menu-item-has-children menu-item-2929">
+											<a href="./index.php" aria-current="page">
+												<span>Home</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-223">
+											<a href="./about.php">
+												<span>About us</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-223">
+											<a href="./events.php">
+												<span>Events</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-221 ">
+											<a href="#">
+												<span>Products</span>
+											</a>
+											<ul class="sub-menu">
+												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184">
+													<a href="./footwear-products.php" target="_blank">
+														<span>Footwear Machinery</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13883">
+													<a href="./stone-products.php">
+														<span>Stone Polishing & Cutting</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1185">
+													<a href="./other-products.php">
+														<span>Other Products</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-126">
+											<a href="./contact.php">
+												<span>Contacts</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+						<div class="ct-menu-overlay"></div>
+					</div>
+				</div>
+				<div id="ct-menu-mobile">
+					<div class="ct-mobile-meta-item btn-nav-mobile open-menu">
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<?php
+}else{
+	?>
+	<header id="ct-header-elementor" class="is-sticky">
+   <div class="ct-header-elementor-main ct-header-fixed-transparent-wrap ct-header-inside-header">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div data-elementor-type="wp-post" data-elementor-id="196" class="elementor elementor-196">
+                  <section class="elementor-section elementor-top-section elementor-element elementor-element-ea79ca4 elementor-section-content-middle elementor-section-stretched ct-header-fixed-transparent elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-column-none ct-row-scroll-none ct-row-gradient--none ct-row-container--default inside-sections" data-id="ea79ca4" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                     <div class="elementor-container elementor-column-gap-extended ">
+                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-2771ca8 ct-column-none col-offset-none ct-logo-content" data-id="2771ca8" data-element_type="column">
+							<div class="ct-logo  style1"> <a href="./index.php"> <img width="771" height="216" src="images/kamhan-logo.png" class="attachment-full" alt=""> </a></div>
+                        </div>
+                        <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-175717b ct-column-none col-offset-none" data-id="175717b" data-element_type="column" style="">
+							<div class="elementor-widget-wrap elementor-element-populated" style="
+								">
+								<div class="elementor-element elementor-element-d3ebdbf elementor-widget__width-auto elementor-widget elementor-widget-ct_menu" data-id="d3ebdbf" data-element_type="widget" data-widget_type="ct_menu.default">
+									<div class="menu-primary-menu-container">
+										<ul id="menu-primary-menu" class="ct-main-menu clearfix">
+										<li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-86 current_page_item megamenu megamenu-style-alt">
+											<a href="./index.php" aria-current="page">
+											<span class="ct-menu-item">
+											<span class="ct-item--number">
+											<span></span>
+											</span>Home</span>
+											<span class="ct-menu--plus"></span>
+											</a>
+										</li>
+										<li id="menu-item-223" class="menu-item menu-item-type-custom menu-item-object-custom">
+											<a href="./about.php">
+											<span class="ct-menu-item">
+											<span class="ct-item--number">
+											<span></span>
+											</span>About Us</span>
+											<span class="ct-menu--plus"></span>
+											</a>
+										</li>
+										<li id="menu-item-223" class="menu-item menu-item-type-custom menu-item-object-custom">
+											<a href="./events.php">
+											<span class="ct-menu-item">
+											<span class="ct-item--number">
+											<span></span>
+											</span>Events</span>
+											<span class="ct-menu--plus"></span>
+											</a>
+										</li>
+										<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-223">
+											<a href="#">
+											<span class="ct-menu-item">
+											<span class="ct-item--number">
+											<span></span>
+											</span>Products</span>
+											<span class="ct-menu--plus"></span>
+											</a>
+											<ul class="sub-menu">
+												<li id="menu-item-1184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184">
+													<a href="./footwear-products.php">
+													<span class="ct-menu-item">
+													<span class="ct-item--number">
+													<span></span>
+													</span>Footwear Machinery</span>
+													<span class="ct-menu--plus"></span>
+													</a>
+												</li>
+												<li id="menu-item-13883" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13883">
+													<a href="./stone-products.php">
+													<span class="ct-menu-item">
+													<span class="ct-item--number">
+													<span></span>
+													</span>Stone Polishing &amp; Cuttting</span>
+													<span class="ct-menu--plus"></span>
+													</a>
+												</li>
+												<li id="menu-item-1185" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1185">
+													<a href="./other-products.php">
+													<span class="ct-menu-item">
+													<span class="ct-item--number">
+													<span></span>
+													</span>Other Products</span>
+													<span class="ct-menu--plus"></span>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li id="menu-item-637" class="menu-item menu-item-type-post_type">
+											<a href="./contact.php">
+											<span class="ct-menu-item">
+											<span class="ct-item--number">
+											<span></span>
+											</span>Contact Us</span>
+											<span class="ct-menu--plus"></span>
+											</a>
+										</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							</div>
+                     </div>
+                  </section>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="ct-header-elementor-sticky fix-header-inside">
+      <div class="container">
+         <div class="row">
+            <div data-elementor-type="wp-post" data-elementor-id="196" class="elementor elementor-196">
+               <section class="elementor-section elementor-top-section elementor-element elementor-element-ea79ca4 elementor-section-content-middle elementor-section-stretched ct-header-fixed-transparent elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-column-none ct-row-scroll-none ct-row-gradient--none ct-row-container--default" data-id="ea79ca4" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" style="width: 1519px; left: -159.6px;">
+                  <div class="elementor-container elementor-column-gap-extended ">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-2771ca8 ct-column-none col-offset-none ct-logo-content" data-id="2771ca8" data-element_type="column">
+						<div class="ct-logo  style1"> <a href="./index.php"> <img width="771" height="216" src="images/kamhan-logo.png" class="attachment-full" alt=""> </a></div>
+					</div>
+                     <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-175717b ct-column-none col-offset-none" data-id="175717b" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                           <div class="elementor-element elementor-element-d3ebdbf elementor-widget__width-auto elementor-widget elementor-widget-ct_menu" data-id="d3ebdbf" data-element_type="widget" data-widget_type="ct_menu.default">
+                              <div class="elementor-widget-container">
+                                 <div class="ct-nav-menu ct-nav-menu1 style1 hv-style1 sub-hv-style1">
+                                    <div class="menu-primary-menu-container">
+									<ul id="menu-primary-menu" class="ct-main-menu clearfix">
+										<li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-86 current_page_item megamenu megamenu-style-alt">
+											<a href="./index.php" aria-current="page">
+											<span class="ct-menu-item">
+											<span class="ct-item--number">
+											<span></span>
+											</span>Home</span>
+											<span class="ct-menu--plus"></span>
+											</a>
+										</li>
+										<li id="menu-item-223" class="menu-item menu-item-type-custom menu-item-object-custom">
+											<a href="./about.php">
+											<span class="ct-menu-item">
+											<span class="ct-item--number">
+											<span></span>
+											</span>About Us</span>
+											<span class="ct-menu--plus"></span>
+											</a>
+										</li>
+										<li id="menu-item-223" class="menu-item menu-item-type-custom menu-item-object-custom">
+											<a href="./events.php">
+											<span class="ct-menu-item">
+											<span class="ct-item--number">
+											<span></span>
+											</span>Events</span>
+											<span class="ct-menu--plus"></span>
+											</a>
+										</li>
+										<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-223">
+											<a href="#">
+											<span class="ct-menu-item">
+											<span class="ct-item--number">
+											<span></span>
+											</span>Products</span>
+											<span class="ct-menu--plus"></span>
+											</a>
+											<ul class="sub-menu">
+												<li id="menu-item-1184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184">
+													<a href="./footwear-products.php">
+													<span class="ct-menu-item">
+													<span class="ct-item--number">
+													<span></span>
+													</span>Footwear Machinery</span>
+													<span class="ct-menu--plus"></span>
+													</a>
+												</li>
+												<li id="menu-item-13883" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13883">
+													<a href="./stone-products.php">
+													<span class="ct-menu-item">
+													<span class="ct-item--number">
+													<span></span>
+													</span>Stone Polishing &amp; Cuttting</span>
+													<span class="ct-menu--plus"></span>
+													</a>
+												</li>
+												<li id="menu-item-1185" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1185">
+													<a href="./other-products.php">
+													<span class="ct-menu-item">
+													<span class="ct-item--number">
+													<span></span>
+													</span>Other Products</span>
+													<span class="ct-menu--plus"></span>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li id="menu-item-637" class="menu-item menu-item-type-post_type">
+											<a href="./contact.php">
+											<span class="ct-menu-item">
+											<span class="ct-item--number">
+											<span></span>
+											</span>Contact Us</span>
+											<span class="ct-menu--plus"></span>
+											</a>
+										</li>
+										</ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="ct-header-mobile off_sticky">
+			<div id="ct-header" class="ct-header-main">
+				<div class="container">
+					<div class="row">
+						<div class="ct-header-branding">
+							<a class="logo-mobile" href="./index.php" title="kamhan" rel="home">
+								<img src="images/kamhan-logo.png" alt="kamhan">
+							</a>
+							<a class="logo-light" href="./index.php" title="kamhan" rel="home">
+								<img src="images/logo-light.png" alt="kamhan">
+							</a>
+						</div>
+						<div class="ct-header-navigation">
+							<nav class="ct-main-navigation">
+								<div class="ct-main-navigation-inner">
+									<div class="ct-logo-mobile">
+										<a class="logo-mobile" href="./index.php" title="kamhan" rel="home">
+											<img src="images/kamhan-logo.png" alt="kamhan">
+										</a>
+										<a class="logo-light" href="./index.php" title="kamhan" rel="home">
+											<img src="images/logo-light.png" alt="kamhan">
+										</a>
+									</div>
+									<ul id="menu-primary-menu-2" class="ct-main-menu clearfix">
+										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-86 current_page_item megamenu megamenu-style-alt menu-item-has-children menu-item-2929">
+											<a href="./index.php" aria-current="page">
+												<span>Home</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-223">
+											<a href="./about.php">
+												<span>About us</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-223">
+											<a href="./events.php">
+												<span>Events</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-221 ">
+											<a href="#">
+												<span>Products</span>
+											</a>
+											<ul class="sub-menu">
+												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184">
+													<a href="./footwear-products.php" target="_blank">
+														<span>Footwear Machinery</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13883">
+													<a href="./stone-products.php">
+														<span>Stone Polishing & Cutting</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1185">
+													<a href="./other-products.php">
+														<span>Other Products</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-126">
+											<a href="./contact.php">
+												<span>Contacts</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+						<div class="ct-menu-overlay"></div>
+					</div>
+				</div>
+				<div id="ct-menu-mobile">
+					<div class="ct-mobile-meta-item btn-nav-mobile open-menu">
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+</header>
+	<?php
+}
+?>
