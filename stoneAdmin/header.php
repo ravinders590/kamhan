@@ -159,11 +159,17 @@ if (!isset($_SESSION['userData'])) {
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview" style="<?php echo $page == 'products' ? 'display: block;':'display: none;'; ?>">
+            <ul class="nav nav-treeview" style="<?php echo $page == 'products' || $page == 'view_products' ? 'display: block;':'display: none;'; ?>">
               <li class="nav-item">
                 <a href="add-products.php" class="nav-link <?php echo $page == 'products' ? 'active':''; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="view-and-edit.php" class="nav-link <?php echo $page == 'view_products' ? 'active':''; ?>">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View/Edit</p>
                 </a>
               </li>
             </ul>

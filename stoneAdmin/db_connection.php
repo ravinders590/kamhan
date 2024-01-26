@@ -15,8 +15,8 @@ private $db_name;
 		if ($_SERVER['SERVER_NAME'] == 'localhost') {
 
 			$this->localhost="localhost";
-			$this->username="stonekamhan_user";
-			$this->password="3cIb$46x5";
+			$this->username="root";
+			$this->password="";
 			$this->db_name="stonekamhan_db";					
 			
 		}else{

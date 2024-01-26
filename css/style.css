@@ -19210,6 +19210,9 @@ section.our-products {
 	width: 100%;
 	padding: 15px 0;
 }
+.pagination{
+	justify-content: center;
+}
 @media(max-width:992px){
 	
 	.sidebar-heading {

@@ -1,4 +1,10 @@
-
+<?php
+ if(isset($_GET['page'])){
+   $page = $_GET['page'];
+}else{
+   $page = 1;
+}
+?>
 <!DOCTYPE html>
 <html lang="en-US">
    <head>
@@ -58,46 +64,100 @@
                </div>
                <div class="col-sm-8 col-lg-9 prod-mob">
                   <div class="products">
-                  <ul class="products columns-3">
-                  <?php
-                        if(isset($_GET['id'])){
-                           $sql = "SELECT * FROM products WHERE category='". $_GET['id'] ."' AND `type` = '".$_GET['type']."';";
-                        }elseif (isset($_GET['type'])) {
-                           $sql = "SELECT * FROM products WHERE new_arrivals='yes' AND `type` = '".$_GET['type']."';";
-                        }
-                        else{
-                           $sql = "SELECT * FROM products WHERE new_arrivals='yes'";
-                        }
-                        $result = mysqli_query($connection, $sql);
-                        
-                        if (!$result) {
-                        die("Query failed: " . mysqli_error($connection));
-                        }
-                        if($result->num_rows > 0){
-                           while ($row = mysqli_fetch_assoc($result)) {
-                              if($row['status'] != 0){
-                                 ?>
-                              <li class="product type-product post-4302 status-publish first instock product_cat-compound product_tag-tools has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                                 <div class="woocommerce-product-inner">
-                                    <div class="woocommerce-product-header"> <a class="woocommerce-product-details" href="product-details.php?slug=<?php echo $row['id']; ?>"> <img width="300" height="300" src="footwearAdmin/upload/<?php echo $row['product_photo']; ?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" sizes="(max-width: 300px) 100vw, 300px"> </a><div class="woocommerce-product-meta"><div class="woocommerce-quick-view"> <button class="woosq-btn woosq-btn-4235" onClick="window.location='product-details.php?slug=<?php echo $row['id']; ?>';" data-id="4235" data-effect="mfp-3d-unfold" data-context="default">Quick view</button></div></div></div>
-                                    <div class="woocommerce-product-content">
-                                       <h4 class="woocommerce-product--title"> <a href="product-details.php?slug=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></h4>
+                  
+                     
+                     <ul class="products columns-3">
+                        <?php
+
+                           if(isset($_GET['id'])){
+                              
+                              $sql = "SELECT * FROM products WHERE category='". $_GET['id'] ."' AND `type` = '".$_GET['type']."';";
+                           }elseif (isset($_GET['type'])) {
+                              $limit = 12;
+                              $offset = ($page - 1) * $limit;
+                              $sql = "SELECT * FROM products WHERE new_arrivals='yes' AND `type` = '".$_GET['type']."' LIMIT $offset, $limit";                              
+                           }
+                           else{
+                              $limit = 6;
+                              $offset = ($page - 1) * $limit;
+                              $sql = "SELECT * FROM products WHERE new_arrivals='yes' LIMIT $offset, $limit";
+                           }
+                           $result = mysqli_query($connection, $sql);
+                           
+                           if (!$result) {
+                           die("Query failed: " . mysqli_error($connection));
+                           }
+                           if($result->num_rows > 0){
+                              while ($row = mysqli_fetch_assoc($result)) {
+                                 if($row['status'] != 0){
+                                    ?>
+                                 <li class="product type-product post-4302 status-publish first instock product_cat-compound product_tag-tools has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                    <div class="woocommerce-product-inner">
+                                       <div class="woocommerce-product-header"> <a class="woocommerce-product-details" href="product-details.php?slug=<?php echo $row['id']; ?>"> <img width="300" height="300" src="footwearAdmin/upload/<?php echo $row['product_photo']; ?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" sizes="(max-width: 300px) 100vw, 300px"> </a><div class="woocommerce-product-meta"><div class="woocommerce-quick-view"> <button class="woosq-btn woosq-btn-4235" onClick="window.location='product-details.php?slug=<?php echo $row['id']; ?>';" data-id="4235" data-effect="mfp-3d-unfold" data-context="default">Quick view</button></div></div></div>
+                                       <div class="woocommerce-product-content">
+                                          <h4 class="woocommerce-product--title"> <a href="product-details.php?slug=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></h4>
+                                       </div>
                                     </div>
-                                 </div>
-                              </li>
-                               <?php
-                              }
-                           }   
-                        }else{
+                                 </li>
+                                 <?php
+                                 }
+                              }   
+                           }else{
+                              ?>
+                              <em class="no-products">No Products Available </em>
+                              <?php
+                           }
+                           
+                           
                            ?>
-                           <em class="no-products">No Products Available </em>
-                           <?php
+                     </ul>
+                     <?php
+                        if(!isset($_GET['type'])){
+                           $items_per_page = 6;
+                           
+                           $product_count = "SELECT * FROM products";
+                           $total_records = mysqli_query($connection, $product_count);
+                           if($total_records->num_rows > 0){
+
+                              $total_record = $total_records->num_rows;
+                              $limit = 6;
+                              $total_page = ceil($total_record/$limit); 
+
+                              
+                              ?>
+                              <nav>
+                                 <ul class="pagination">
+                                    <li class="page-item <?php echo $page == 1 ? 'disabled': '' ;?> ">
+                                       <a class="page-link" href="?page=<?php echo $page - 1;?>" tabindex="-1">Previous</a>
+                                    </li>
+                                       <?php
+                                          for ($i=1; $i < $total_page; $i++) { 
+                                          $minarea = ceil($total_page/2);
+                                          if($i <= $minarea - 1 ){
+                                             ?>
+                                             <li class="page-item <?php echo $page == $i ? 'active' : ''  ?>">
+                                                <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i;?></a>
+                                             </li>
+                                             <?php
+                                          }
+                                       
+                                       }
+                                       ?>
+                                    <li class="page-item <?php echo $page ? 'active' : ''  ?>">
+                                       <a class="page-link" href="?page=<?php echo $page + 1;?>">...</a>
+                                    </li>  
+                                    <li class="page-item <?php echo ($page == $total_page - 1) ? 'disabled': '' ;?>">
+                                       <a class="page-link" href="?page=<?php echo $page + 1;?>">Next</a>
+                                    </li>
+                                 </ul>
+                              </nav>
+                              <?php
+
+                           }
                         }
-                        
                         
                         ?>
-                  </ul>
-                     <?php /* 
+                      <?php /* 
                         $sql = "SELECT * FROM products WHERE new_arrivals='yes'";
                         $result = mysqli_query($connection, $sql);
                         if (!$result) {
@@ -124,6 +184,8 @@
                            }
                         } */            
                         ?>
+                        
+                        
                   </div>
                </div>
             </div>
@@ -162,27 +224,15 @@
       <script src="./js/jquery.flexslider.min.js" id="flexslider-js"></script>
       <script src="./js/photoswipe.min.js" id="photoswipe-js"></script>
       <script src="./js/photoswipe-ui-default.min.js" id="photoswipe-ui-default-js"></script>
-      <script id="wc-single-product-js-extra">
-         var wc_single_product_params = {
-             i18n_required_rating_text: "Please select a rating",
-             review_rating_required: "yes",
-             flexslider: { rtl: false, animation: "slide", smoothHeight: true, directionNav: false, controlNav: "thumbnails", slideshow: false, animationSpeed: 500, animationLoop: false, allowOneSlide: false },
-             zoom_enabled: "1",
-             zoom_options: [],
-             photoswipe_enabled: "1",
-             photoswipe_options: { shareEl: false, closeOnScroll: false, history: false, hideAnimationDuration: 0, showAnimationDuration: 0 },
-             flexslider_enabled: "1",
-         };
-      </script>
+      
       <script src="./js/single-product.min.js" id="wc-single-product-js"></script>
       <script type="text/javascript" src="./js/jquery.magnific-popup.min.js" id="magnific-popup-js"></script>
-      <script type="text/javascript" src="./js/woosw-frontend.min.js" id="woosw-frontend-js"></script>
+      <!-- <script type="text/javascript" src="./js/woosw-frontend.min.js" id="woosw-frontend-js"></script> -->
       <script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
       <script type="text/javascript" src="js/industo-main.min.js" id="industo-main-js"></script>
       <script type="text/javascript" src="js/ct-inline-css.js" id="ct-inline-css-js-js"></script>
       <script type="text/javascript" src="js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
       <script type="text/javascript" src="js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
-      <script id="elementor-frontend-js-before" type="text/javascript"> var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.12.2","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"a11y_improvements":true,"additional_custom_breakpoints":true,"landing-pages":true},"urls":{"assets":"https:\/\/demo.casethemes.net\/industo\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper-container","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":6,"title":"Industo%20%E2%80%93%20Industry%20%26%20Factory%20WordPress","excerpt":"","featuredImage":false}}; </script>
-      <script type="text/javascript" src="js/frontend.min.js" id="elementor-frontend-js"></script>
+      <!-- <script type="text/javascript" src="js/frontend.min.js" id="elementor-frontend-js"></script> -->
    </body>
 </html>
