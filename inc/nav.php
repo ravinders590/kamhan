@@ -8,7 +8,7 @@
          <ul class="product-categories">
           <?php
           if(isset($_GET['type']) && ($_GET['type'] === 'footwear machine')){
-              $sqlMainCat ="SELECT * FROM `main_category` WHERE `type` = '". $_GET['type'] ."'";            
+              $sqlMainCat ="SELECT * FROM `main_category` WHERE `type` = '". $_GET['type'] ."' ORDER BY `name` ASC";            
                $resultMainCat = mysqli_query($connection, $sqlMainCat);
                if (!$resultMainCat) {
                    die("Query failed: " . mysqli_error($connection));
@@ -26,7 +26,7 @@
                }
 
           }elseif (isset($_GET['type']) && ($_GET['type'] === 'footwear moulds')) {
-            $sqlMainCat ="SELECT * FROM `main_category` WHERE `type` = '". $_GET['type'] ."'";            
+            $sqlMainCat ="SELECT * FROM `main_category` WHERE `type` = '". $_GET['type'] ."' ORDER BY `name` ASC";            
                $resultMainCat = mysqli_query($connection, $sqlMainCat);
                if (!$resultMainCat) {
                    die("Query failed: " . mysqli_error($connection));
@@ -44,8 +44,8 @@
                }
           }else{
             ?>
-            <li class="cat-item cat-item-35"><a class="sub-btn" href="footwear-products.php?type=footwear machine">Footwwear Machines</a></li>
-            <li class="cat-item cat-item-35"><a class="sub-btn" href="footwear-products.php?type=footwear moulds">Footwwear Moulds</a></li>
+            <li class="cat-item cat-item-35"><a class="sub-btn" href="footwear-products.php?type=footwear machine">Footwear Machines</a></li>
+            <li class="cat-item cat-item-35"><a class="sub-btn" href="footwear-products.php?type=footwear moulds">Footwear Moulds</a></li>
             <?php
           }
           ?>

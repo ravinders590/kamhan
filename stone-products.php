@@ -1,3 +1,10 @@
+<?php
+ if(isset($_GET['page'])){
+   $page = $_GET['page'];
+}else{
+   $page = 1;
+}
+?>
 <!DOCTYPE html>
 <html lang="en-US">
    <head>
@@ -60,52 +67,86 @@
               <div class="products">
                <ul class="products columns-3">
                   <?php 
-                        $sql = "SELECT * FROM products";
+                        if(isset($_GET['id'])){     
+                           $sql = "SELECT * FROM products WHERE category='". $_GET['id'] ."'";
+                        }else{
+                           $limit = 12;
+                           $offset = ($page - 1) * $limit;
+                           $sql = "SELECT * FROM products WHERE new_arrivals='yes' LIMIT $offset, $limit";
+                        }
                         $result = mysqli_query($connection, $sql);
                         if (!$result) {
                         die("Query failed: " . mysqli_error($connection));
                         }	
-                        while ($row = mysqli_fetch_array($result)) {
-                           if($row['status'] != 0){
-                              ?>
-                     <li class="product type-product post-4302 status-publish first instock product_cat-compound product_tag-tools has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                        <div class="woocommerce-product-inner">
-                           <div class="woocommerce-product-header"> <a class="woocommerce-product-details" href="stoneproduct-details.php?slug=<?php echo $row['id']; ?>"> <img width="300" height="300" src="stoneAdmin/upload/<?php echo $row['product_photo']; ?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" sizes="(max-width: 300px) 100vw, 300px"> </a><div class="woocommerce-product-meta"><div class="woocommerce-quick-view"> <button class="woosq-btn woosq-btn-4235" onClick="window.location='stoneproduct-details.php?slug=<?php echo $row['id']; ?>';" data-id="4235" data-effect="mfp-3d-unfold" data-context="default">Quick view</button></div></div></div>
-                           <div class="woocommerce-product-content">
-                              <h4 class="woocommerce-product--title"> <a href="stoneproduct-details.php?slug=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></h4>
+                        if($result->num_rows > 0){
+                           while ($row = mysqli_fetch_array($result)) {
+                              if($row['status'] != 0){
+                                 ?>
+                        <li class="product type-product post-4302 status-publish first instock product_cat-compound product_tag-tools has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                           <div class="woocommerce-product-inner">
+                              <div class="woocommerce-product-header"> <a class="woocommerce-product-details" href="stoneproduct-details.php?slug=<?php echo $row['id']; ?>"> <img width="300" height="300" src="stoneAdmin/upload/<?php echo $row['product_photo']; ?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" sizes="(max-width: 300px) 100vw, 300px"> </a><div class="woocommerce-product-meta"><div class="woocommerce-quick-view"> <button class="woosq-btn woosq-btn-4235" onClick="window.location='stoneproduct-details.php?slug=<?php echo $row['id']; ?>';" data-id="4235" data-effect="mfp-3d-unfold" data-context="default">Quick view</button></div></div></div>
+                              <div class="woocommerce-product-content">
+                                 <h4 class="woocommerce-product--title"> <a href="stoneproduct-details.php?slug=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></h4>
+                              </div>
                            </div>
-                        </div>
-                     </li>
-                     <?php
+                        </li>
+                        <?php
+                              }
+                           } 
+                        }else{
+                              ?>
+                              <em class="no-products">No Products Available </em>
+                              <?php
                            }
-                        }             
+                                    
                         ?>
                </ul>
-               <?php /*
-                $sql = "SELECT * FROM products";
-                $result = mysqli_query($connection, $sql);
-                if (!$result) {
-                die("Query failed: " . mysqli_error($connection));
-                }	
-                while ($row = mysqli_fetch_array($result)) {
-                    ?>
-                    <div class="product-items">
-                        <div class="img">
-                            <a class="img_show" href="stoneproduct-details.php?slug=<?php echo $row['id']; ?>" title="<?php echo $row['name']; ?>">
-                                <!--img src="footwearAdmin/upload/01_1701356433.png" alt="<?php echo $row['name']; ?>"-->
-                                <img decoding="async" class="no-lazyload" src="stoneAdmin/upload/<?php echo $row['product_photo']; ?>" width="450" height="500" alt="Energy" title="Energy" />
-                            </a>
-                        </div>
-                        <div class="txt">
-                            <a href="stoneproduct-details.php?slug=<?php echo $row['id']; ?>" target="_blank" title="<?php echo $row['name']; ?>">
-                                <h3><?php echo $row['name']; ?></h3>
-                            </a>
-                            <a href="stoneproduct-details.php?slug=<?php echo $row['id']; ?>" target="_blank" title="<?php echo $row['name']; ?>" class="link">view</a>
-                        </div>
-                    </div>
-                    <?php
-                }     */        
-                ?>
+               <?php
+                  if(!isset($_GET['id'])){
+                     $items_per_page = 6;
+                     
+                     $product_count = "SELECT * FROM products";
+                     $total_records = mysqli_query($connection, $product_count);
+                     if($total_records->num_rows > 0){
+
+                        $total_record = $total_records->num_rows;
+                        $limit = 6;
+                        $total_page = ceil($total_record/$limit); 
+
+                        
+                        ?>
+                        <nav>
+                           <ul class="pagination">
+                              <li class="page-item <?php echo $page == 1 ? 'disabled': '' ;?> ">
+                                 <a class="page-link" href="?page=<?php echo $page - 1;?>" tabindex="-1">Previous</a>
+                              </li>
+                                 <?php
+                                    for ($i=1; $i < $total_page; $i++) { 
+                                    $minarea = ceil($total_page/2);
+                                    if($i <= $minarea - 1 ){
+                                       ?>
+                                       <li class="page-item <?php echo $page == $i ? 'active' : ''  ?>">
+                                          <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i;?></a>
+                                       </li>
+                                       <?php
+                                    }
+                                 
+                                 }
+                                 ?>
+                              <li class="page-item <?php echo $page ? 'active' : ''  ?>">
+                                 <a class="page-link" href="?page=<?php echo $page + 1;?>">...</a>
+                              </li>  
+                              <li class="page-item <?php echo ($page == $total_page - 1) ? 'disabled': '' ;?>">
+                                 <a class="page-link" href="?page=<?php echo $page + 1;?>">Next</a>
+                              </li>
+                           </ul>
+                        </nav>
+                        <?php
+
+                     }
+                  }
+                  
+               ?>
               </div>
             </div>
           </div>

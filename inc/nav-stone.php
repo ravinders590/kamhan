@@ -2,7 +2,7 @@
 <div class="sidebar-sticky">
       <section id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
          <div class="widget-content">
-            <h2 class="widget-title sidebar-headings"><span>Stone categories</span> <i class="fas fa-caret-down"></i></h2>
+            <h2 class="widget-title sidebar-headings"><span>Stone Categories</span> <i class="fas fa-caret-down"></i></h2>
             <ul class="product-categories">
               <?php
               $catId='';
@@ -12,7 +12,7 @@
                                 LEFT JOIN sub_category sc ON mc.id = sc.cat_id 
                                 GROUP BY mc.id, mc.name ORDER BY 
     mc.id asc;  -- Order by main_category name";*/
-              $sqlMainCat ="SELECT * FROM `main_category`";
+              $sqlMainCat ="SELECT * FROM `main_category` ORDER BY `name` ASC";
               $resultMainCat = mysqli_query($connection, $sqlMainCat);
               if (!$resultMainCat) {
                   die("Query failed: " . mysqli_error($connection));

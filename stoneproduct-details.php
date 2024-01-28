@@ -7,9 +7,9 @@
  die("Query failed: " . mysqli_error($connection));
  }
  $row = mysqli_fetch_assoc($result);
- $youtube_video = str_replace('https://www.youtube.com/watch?v=','https://www.youtube.com/embed/',$row['youtube_video']);
+//  $youtube_video = str_replace('https://www.youtube.com/watch?v=','https://www.youtube.com/embed/',$row['youtube_video']);
  $site_path = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
- $product_url = $_SERVER['HTTP_HOST'] .  '/kamhan-new/footwearAdmin/upload/' . $row['product_photo'];
+ $product_url = $_SERVER['HTTP_HOST'] .  '/kamhan-new/stoneAdmin/upload/' . $row['product_photo'];
  $meta_title = $row['name'];
  $meta_dec = 'Although, Kam Han Industrial Ltd. Was incorporated in Hong Kong in 1989, but it commenced the said business 35 years ago. The company was established with the profile of general trading, but due to the progressive success accomplished, the company had today established itself as a leader in the diverse categories of products and value added services. The most recent achievements in the last few years are in the domain of Footwear Manufacturing and Machinery, Turnkey solutions for Footwear industry and Umbrella components.
  We are leading provider of Footwear machines of various types. Our expertise in this area is further augmented by our technical support team and complete insight into it. Not to mention, our experience and strategic contacts with the related business partners makes us the most competitive and reliable source for all kinds of footwear machines. Select from Footwear machines below.';
@@ -73,7 +73,7 @@
                                  <div class="container woo-entry p-0">
                                     <div id="product-285" class="product type-product post-285 status-publish first instock product_cat-mechanical-products has-post-thumbnail shipping-taxable purchasable product-type-simple">
                                        <div class="row">
-                                          <div class="col-lg-5 col-md-5 left-product-panel">
+                                          <div class="col-lg-6 col-md-6 left-product-panel">
                                              <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="opacity: 0; transition: opacity 0.25s ease-in-out;">
                                                 <div class="woocommerce-product-gallery__wrapper">
                                                    <div data-thumb="stoneAdmin/upload/<?php echo $row['product_photo']; ?>" data-thumb-alt="" class="woocommerce-product-gallery__image">
@@ -97,6 +97,9 @@
                                                          />
                                                       </a>
                                                    </div>
+                                                   <?php 
+                                                      if(!empty($row['product_photo_th_01'])){
+                                                      ?>
                                                    <div data-thumb="stoneAdmin/upload/<?php echo $row['product_photo_th_01']; ?>" data-thumb-alt="" class="woocommerce-product-gallery__image">
                                                       <a href="stoneAdmin/upload/<?php echo $row['product_photo_th_01']; ?>">
                                                       <img
@@ -118,6 +121,9 @@
                                                          />
                                                       </a>
                                                    </div>
+                                                   <?php }
+                                                      if(!empty($row['product_photo_th_02'])){
+                                                      ?>
                                                    <div data-thumb="stoneAdmin/upload/<?php echo $row['product_photo_th_02']; ?>" data-thumb-alt="" class="woocommerce-product-gallery__image">
                                                       <a href="stoneAdmin/upload/<?php echo $row['product_photo_th_02']; ?>">
                                                       <img
@@ -139,6 +145,9 @@
                                                          />
                                                       </a>
                                                    </div>
+                                                   <?php }
+                                                      if(!empty($row['product_photo_th_03'])){
+                                                      ?>
                                                    <div data-thumb="stoneAdmin/upload/<?php echo $row['product_photo_th_03']; ?>" data-thumb-alt="" class="woocommerce-product-gallery__image">
                                                       <a href="stoneAdmin/upload/<?php echo $row['product_photo_th_03']; ?>">
                                                       <img
@@ -160,7 +169,9 @@
                                                          />
                                                       </a>
                                                    </div>
-                                                   <?php if ($row['product_photo_th_04']!=''){ ?>
+                                                   <?php }
+                                                      if(!empty($row['product_photo_th_04'])){
+                                                      ?>
                                                    <div data-thumb="stoneAdmin/upload/<?php echo $row['product_photo_th_04']; ?>" data-thumb-alt="" class="woocommerce-product-gallery__image">
                                                       <a href="stoneAdmin/upload/<?php echo $row['product_photo_th_04']; ?>">
                                                       <img
@@ -182,13 +193,13 @@
                                                          />
                                                       </a>
                                                    </div>
-                                                   <?php }else{ ?>
-                                                   <p></p>
-                                                   <?php } ?>
+                                                   <?php   
+                                                      }
+                                                      ?>
                                                 </div>
                                              </div>
                                           </div>
-                                          <div class="col-lg-7 col-md-7 right-product-panel">
+                                          <div class="col-lg-6 col-md-6 right-product-panel">
                                              <div class="summary entry-summary">
                                                 <div class="woocommerce-sg-product-rating">
                                                    <div class="woocommerce-product-rating">
@@ -229,17 +240,28 @@
                                           <div class="tab-content">
                                              <div id="features" class="tab-pane active">
                                                 <div class="tab-content-inner">
-                                                   <?php echo !empty($row['productmaterial']) ? $row['productmaterial'] : '' ; ?>
+                                                   <?php
+                                                   if(!empty($row['productmaterial'])){
+                                                      echo $row['productmaterial'];
+                                                   }else{
+                                                      ?>
+                                                      <em class="comments-title m-t0 no-data-notes">No Data Available</span></em>
+                                                      <?php
+                                                   }
+                                                   ?>
                                                 </div>
                                              </div>
                                              
                                              <div id="localDisplay" class="tab-pane">
                                                 <div class="tab-content-inner">
                                                    <div class="clear" id="comment-list">
-                                                         <h2 class="comments-title m-t0">Product Display</span></h2>
-                                                         <div id="reviews" class="woocommerce-Reviews comments-area product-display-areas">
+                                                      <h2 class="comments-title m-t0">Product Display</span></h2>
+                                                      <div id="reviews" class="woocommerce-Reviews comments-area product-display-areas">
+                                                         <?php
+                                                            if(!empty($row['product_photo'])){
+                                                            ?>
                                                          <div data-thumb="stoneAdmin/upload/<?php echo $row['product_photo']; ?>" data-thumb-alt="" class="woocommerce-product-gallery__image">
-                                                         <img
+                                                            <img
                                                                width="300"
                                                                height="300"
                                                                src="stoneAdmin/upload/<?php echo $row['product_photo']; ?>"
@@ -257,8 +279,12 @@
                                                                sizes="(max-width: 280px) 100vw, 280px"
                                                                />
                                                          </div>
+                                                         <?php
+                                                            }
+                                                            if(!empty($row['product_photo_th_01'])){
+                                                            ?>
                                                          <div data-thumb="stoneAdmin/upload/<?php echo $row['product_photo_th_01']; ?>" data-thumb-alt="" class="woocommerce-product-gallery__image">
-                                                         <img
+                                                            <img
                                                                width="300"
                                                                height="300"
                                                                src="stoneAdmin/upload/<?php echo $row['product_photo_th_01']; ?>"
@@ -276,8 +302,12 @@
                                                                sizes="(max-width: 280px) 100vw, 280px"
                                                                />
                                                          </div>
+                                                         <?php
+                                                            }
+                                                            if(!empty($row['product_photo_th_02'])){
+                                                            ?>
                                                          <div data-thumb="stoneAdmin/upload/<?php echo $row['product_photo_th_02']; ?>" data-thumb-alt="" class="woocommerce-product-gallery__image">
-                                                         <img
+                                                            <img
                                                                width="300"
                                                                height="300"
                                                                src="stoneAdmin/upload/<?php echo $row['product_photo_th_02']; ?>"
@@ -295,8 +325,12 @@
                                                                sizes="(max-width: 280px) 100vw, 280px"
                                                                />
                                                          </div>
+                                                         <?php
+                                                            }
+                                                            if(!empty($row['product_photo_th_03'])){
+                                                            ?>
                                                          <div data-thumb="stoneAdmin/upload/<?php echo $row['product_photo_th_03']; ?>" data-thumb-alt="" class="woocommerce-product-gallery__image">
-                                                         <img
+                                                            <img
                                                                width="300"
                                                                height="300"
                                                                src="stoneAdmin/upload/<?php echo $row['product_photo_th_03']; ?>"
@@ -314,22 +348,56 @@
                                                                sizes="(max-width: 280px) 100vw, 280px"
                                                                />
                                                          </div>
+                                                         <?php
+                                                            }
+                                                            ?>
                                                          <div class="clear"></div>
                                                       </div>
                                                    </div>
                                                 </div>
                                              </div>
+                                             
                                              <div id="videos" class="tab-pane">
                                                 <div class="tab-content-inner">
                                                    <div class="clear" id="comment-list">
+                                                      <?php 
+                                                         if(!empty($row['youtube_video'])){
+                                                            ?>
                                                       <h2 class="comments-title m-t0">Videos</span></h2>
                                                       <div id="reviews" class="woocommerce-Reviews comments-area product-video-display-areas">
                                                          <div class="woocommerce-product-gallery__image">
-                                                               <iframe src="<?php echo $youtube_video; ?>" title="CHAMFERING MACHINE VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                         <?php
+                                                            $youtube_multi_url = explode(' ',$row['youtube_video']);
+                                                            $youtube_multi_url = array_unique($youtube_multi_url);
+                                                            for ($j=0; $j <= count($youtube_multi_url) ; $j++) { 
+                                                               $new_youtube_url = str_replace('?rel=0',' ',$youtube_multi_url[$j]); 
+                                                               if(preg_match('/embed/',$new_youtube_url) === 1){
+                                                                  $new_youtube_url = explode('/',$new_youtube_url);
+                                                                  $new_youtube_url = trim(end($new_youtube_url));
+                                                                  ?>
+                                                                  <iframe width="100" height="200" src="https://www.youtube.com/embed/<?php echo $new_youtube_url; ?>?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                                  <?php
+                                                               }elseif(preg_match('/watch/',$new_youtube_url) === 1){
+                                                                  $new_youtube_url = explode('?v=',$new_youtube_url);
+                                                                  $new_youtube_url = trim(end($new_youtube_url));
+                                                                  ?>
+                                                                  <iframe width="100" height="200" src="https://www.youtube.com/embed/<?php echo $new_youtube_url; ?>?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                                  <?php
+                                                               }
+                                                               
+                                                            }
+                                                            
+                                                            ?>
                                                          </div>
-                                                         
                                                          <div class="clear"></div>
                                                       </div>
+                                                      <?php
+                                                         }else{
+                                                            ?>
+                                                      <em class="comments-title m-t0 no-data-notes">No Data Available</span></em>
+                                                      <?php
+                                                         }
+                                                         ?>
                                                    </div>
                                                 </div>
                                              </div>
