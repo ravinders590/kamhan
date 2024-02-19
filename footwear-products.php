@@ -73,9 +73,9 @@
                               
                               $sql = "SELECT * FROM products WHERE category='". $_GET['id'] ."' AND `type` = '".$_GET['type']."';";
                            }elseif (isset($_GET['type'])) {
-                              $limit = 12;
-                              $offset = ($page - 1) * $limit;
-                              $sql = "SELECT * FROM products WHERE new_arrivals='yes' AND `type` = '".$_GET['type']."' LIMIT $offset, $limit";                              
+                              // $limit = 12;
+                              // $offset = ($page - 1) * $limit;
+                              $sql = "SELECT * FROM products WHERE new_arrivals='yes' AND `type` = '".$_GET['type']."'";                              
                            }
                            else{
                               $limit = 6;

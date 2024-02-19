@@ -19142,6 +19142,7 @@ i.fas.fa-angle-right.dropdown {
 }
 .woocommerce .products ul.products{
 	width: 100%;
+	margin: 0;
 }
 section.our-products {
     background-color: #EFEFEF;
@@ -19212,6 +19213,12 @@ section.our-products {
 }
 .pagination{
 	justify-content: center;
+}
+.woocommerce .woocommerce-topbar{
+	padding: 0 15px;
+}
+ul.product-categories.top-categories{
+	margin-bottom: 30px;
 }
 @media(max-width:992px){
 	

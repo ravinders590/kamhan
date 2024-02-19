@@ -6,21 +6,20 @@
 		<link rel="profile" href="//gmpg.org/xfn/11">
 		<title>Kamhan Industrial | Footwear | Manufacturing & Machinery</title>
 		<meta name="robots" content="max-image-preview:large">
-        <link rel="icon" type="image/png" href="images/favi.png">
-		<link rel="dns-prefetch" href="//fonts.googleapis.com">
+		<link rel="icon" type="image/png" href="images/favi.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 		<link rel="stylesheet" href="./css/tabs.css">
 		<link rel="stylesheet" id="bootstrap-css" href="css/bootstrap.min.css" type="text/css" media="all">
 		<link rel="stylesheet" id="caseicon-css" href="css/caseicon.min.css" type="text/css" media="all">
 		<link rel="stylesheet" id="flaticon2-css" href="css/flaticon2.min.css" type="text/css" media="all">
 		<link rel="stylesheet" id="industo-theme-css" href="css/industo-theme.min.css" type="text/css" media="all">
-		<link rel="stylesheet" id="elementor-icons-css" href="css/elementor-icons.min.css" type="text/css" media="all">
 		<link rel="stylesheet" id="elementor-frontend-css" href="css/frontend-lite.min.css" type="text/css" media="all">
 		<link rel="stylesheet" id="elementor-post-6-css" href="css/post-6.css" type="text/css" media="all">
-		
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" rel="stylesheet">
-		<style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">body #ct-pagetitle{background-image:url('./images/pageimages/events.jpg');}a{color:#fe0000;}a:hover{color:#fe0000;}a:active{color:#fe0000;}</style>
-		
+		<link rel="stylesheet" id="elementor-post-146-css" href="css/post-146.css" type="text/css" media="all">
+		<link rel="stylesheet" id="elementor-post-2951-css" href="css/post-2951.css" type="text/css" media="all">
+		<link rel="stylesheet" id="elementor-post-13732-css" href="css/post-13732.css" type="text/css" media="all">
+		<link rel="stylesheet" id="industroz-style-css" href="./css/style.css" media="all" />
+		<style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">body #ct-pagetitle{background-image:url('./images/pageimages/about.jpg');}a{color:#fe0000;}a:hover{color:#fe0000;}a:active{color:#fe0000;}</style>
 	</head>
 	<body class="home page-template-default page page-id-86 theme-industo woocommerce-js redux-page  site-h146 body-default-font heading-default-font  site-404-default elementor-default elementor-kit-7 elementor-page elementor-page-86">
 		<div id="page" class="site">
